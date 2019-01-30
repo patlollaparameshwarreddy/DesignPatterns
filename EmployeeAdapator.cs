@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace DesignPatterns
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
     class EmployeeAdapator : HrSystemAdaptee, ITarget
     {
         public List<String> GetEmployeeList()
