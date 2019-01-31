@@ -1,38 +1,78 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="IFactory.cs" company="CompanyName">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DesignPatterns
 {
-    interface IFactory
+    using System;
+
+    /// <summary>
+    /// Factory interface
+    /// </summary>
+    public interface IFactory
     {
+        /// <summary>
+        /// abstract method
+        /// </summary>
         void Details();
     }
 
-    class PermanentEmployee : IFactory
+    /// <summary>
+    /// this class is used for storing the PermanentEmployee
+    /// </summary>
+    public class PermanentEmployee : IFactory
     {
+        /// <summary>
+        /// abstract method
+        /// </summary>
         public void Details()
         {
             Console.WriteLine("permanent employee type object");
         }
     }
 
-    class TemporaryEmployee : IFactory
+    /// <summary>
+    /// this class is used for storing the TemporaryEmployee
+    /// </summary>
+    public class TemporaryEmployee : IFactory
     {
+        /// <summary>
+        /// this method is used for giving details
+        /// </summary>
         public void Details()
         {
             Console.WriteLine("temporary employee type object");
         }
     }
 
-   abstract class EmployeeFactory
+    /// <summary>
+    /// the abstract class of factory
+    /// </summary>
+   public abstract class EmployeeFactory
     {
+        /// <summary>
+        /// Factories the specified employee type.
+        /// </summary>
+        /// <param name="employeeType">Type of the employee.</param>
+        /// <returns> the employee details</returns>
         public abstract IFactory Factory(string employeeType);
     }
 
-    class ConcreteEmployeeFactory : EmployeeFactory
+    /// <summary>
+    /// this class is used for implementing the abstract class
+    /// </summary>
+    public class ConcreteEmployeeFactory : EmployeeFactory
     {
-        public override IFactory Factory(string employeeType)
+        /// <summary>
+        /// Factories the specified employee type.
+        /// </summary>
+        /// <param name="employeeType">Type of the employee.</param>
+        /// <returns>
+        /// the employee details
+        /// </returns>
+       /// <exception cref="ApplicationException">This type of employee can not be created</exception>
+       public override IFactory Factory(string employeeType)
         {
            switch (employeeType)
             {

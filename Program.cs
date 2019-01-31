@@ -17,6 +17,8 @@ namespace DesignPatterns
                     Console.WriteLine("enter 3 for adaptor design pattern");
                     Console.WriteLine("enter 4 for proxy design pattern");
                     Console.WriteLine("enter 5 for facade design pattern");
+                    Console.WriteLine("enter 6 for mediator design pattern");
+                    Console.WriteLine("enter 7 for observer 1 designer pattern");
                     switchCases = Convert.ToInt32(Console.ReadLine());
                     switch (switchCases)
                     {
@@ -48,6 +50,14 @@ namespace DesignPatterns
                             HomeFacade homeFacade = new HomeFacade();
                             homeFacade.LeaveHome();
                             homeFacade.ArriveHome();
+                            break;
+                        case 6:
+                            MediatorMainClass mediator = new MediatorMainClass();
+                            mediator.Mediator();
+                            break;
+                        case 7:
+                            ObserverClass observerClass = new ObserverClass();
+                            observerClass.Observer();
                             break;
                     }
 

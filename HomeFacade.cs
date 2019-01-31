@@ -1,22 +1,65 @@
-﻿
+﻿//-----------------------------------------------------------------------
+// <copyright file="HomeFacade.cs" company="CompanyName">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace DesignPatterns
 {
     using System;
 
     /// <summary>
-    /// 
+    /// facade class
     /// </summary>
    public class HomeFacade
     {
-        Lights lights;
-        MusicSystem musicSystem;
-        TV tv;
+        /// <summary>
+        /// variable of type light
+        /// </summary>
+        private Lights lights;
+
+        /// <summary>
+        /// variable of type musicSystem
+        /// </summary>
+        private MusicSystem musicSystem;
+
+        /// <summary>
+        /// variable of type TV
+        /// </summary>
+        private TV tv;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="HomeFacade"/> class.
+        /// </summary>
         public HomeFacade()
         {
-            lights = new Lights();
-            musicSystem = new MusicSystem();
-            tv = new TV();
+            this.Lights = new Lights();
+            this.MusicSystem = new MusicSystem();
+            this.Tv = new TV();
         }
+
+        /// <summary>
+        /// Gets or sets the lights.
+        /// </summary>
+        /// <value>
+        /// The lights.
+        /// </value>
+        public Lights Lights { get => this.lights; set => this.lights = value; }
+
+        /// <summary>
+        /// Gets or sets the music system.
+        /// </summary>
+        /// <value>
+        /// The music system.
+        /// </value>
+        public MusicSystem MusicSystem { get => this.musicSystem; set => this.musicSystem = value; }
+
+        /// <summary>
+        /// Gets or sets the TV.
+        /// </summary>
+        /// <value>
+        /// The TV.
+        /// </value>
+        public TV Tv { get => this.tv; set => this.tv = value; }
 
         /// <summary>
         /// Leaves the home.
@@ -24,9 +67,9 @@ namespace DesignPatterns
         public void LeaveHome()
         {
             Console.WriteLine("******LEAVING HOME*********");
-            lights.SwitchOffLights();
-            tv.switchOffTV();
-            musicSystem.SwitchOffMusicSystem();
+            this.Lights.SwitchOffLights();
+            this.Tv.SwitchOffTV();
+            this.MusicSystem.SwitchOffMusicSystem();
         }
 
         /// <summary>
@@ -35,14 +78,14 @@ namespace DesignPatterns
         public void ArriveHome()
         {
             Console.WriteLine("*********ARRIVED HOME********");
-            lights.SwitchOnLights();
-            tv.switchOnTV();
-            musicSystem.SwitchOnMusicSystem();
+            this.Lights.SwitchOnLights();
+            this.Tv.SwitchOnTV();
+            this.MusicSystem.SwitchOnMusicSystem();
         }
     }
 
     /// <summary>
-    /// 
+    /// sub system one
     /// </summary>
     public class Lights
     {
@@ -64,7 +107,7 @@ namespace DesignPatterns
     }
 
     /// <summary>
-    /// 
+    /// sub system two
     /// </summary>
     public class MusicSystem
     {
@@ -86,22 +129,22 @@ namespace DesignPatterns
     }
 
     /// <summary>
-    /// 
+    /// sub system three
     /// </summary>
     public class TV
     {
         /// <summary>
-        /// Switches the on tv.
+        /// Switches the on TV.
         /// </summary>
-        public void switchOnTV()
+        public void SwitchOnTV()
         {
             Console.WriteLine("TV Switched ON");
         }
 
         /// <summary>
-        /// Switches the off tv.
+        /// Switches the off TV.
         /// </summary>
-        public void switchOffTV()
+        public void SwitchOffTV()
         {
             Console.WriteLine("TV Switched OFF");
         }
