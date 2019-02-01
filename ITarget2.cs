@@ -1,22 +1,21 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ITarget.cs" company="CompanyName">
+// <copyright file="ITarget2.cs" company="CompanyName">
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
 namespace DesignPatterns
 {
-    using System;
     using System.Collections.Generic;
 
     /// <summary>
-    /// creating interface for get employee details
+    /// ITarget2 is a interface
     /// </summary>
-    public interface ITarget
+    public interface ITarget2
     {
         /// <summary>
-        /// Gets the employee list.
+        /// Gets the products.
         /// </summary>
-        /// <returns> returns the employee data</returns>
-        List<string> GetEmployeeList();
+        /// <returns>list of string</returns>
+        List<string> GetProducts();
     }
 }

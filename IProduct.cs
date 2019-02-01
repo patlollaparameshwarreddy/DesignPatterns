@@ -124,17 +124,6 @@ namespace DesignPatterns
         }
 
         /// <summary>
-        /// Gets the name.
-        /// </summary>
-        /// <value>
-        /// The name.
-        /// </value>
-        public string Name
-        {
-            get { return this.Name1; }
-        }
-
-        /// <summary>
         /// Gets the discount.
         /// </summary>
         /// <value>
@@ -179,6 +168,17 @@ namespace DesignPatterns
         /// The current price1.
         /// </value>
         public float CurrentPrice1 { get => this.currentPrice; set => this.currentPrice = value; }
+
+        /// <summary>
+        /// Gets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public string Name
+        {
+            get { return this.Name1; }
+        }
     }
 
     /// <summary>
