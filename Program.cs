@@ -37,6 +37,8 @@ namespace DesignPatterns
                     Console.WriteLine("enter 8 for observer 2 designer pattern");
                     Console.WriteLine("enter 9 for visitor design pattern");
                     Console.WriteLine("enter 10 for adaptor2 design patten");
+                    Console.WriteLine("enter 11 for Reflection");
+                    Console.WriteLine("enter 12 for Annotation program");
                     try
                     {
                         switchCases = Convert.ToInt32(Console.ReadLine());
@@ -96,6 +98,14 @@ namespace DesignPatterns
                         case 10:
                             VendorAdapter vendorAdapter = new VendorAdapter();
                             vendorAdapter.SellingItems();
+                            break;
+                        case 11:
+                            ExampleOfReflection exampleOfReflection = new ExampleOfReflection();
+                            exampleOfReflection.ReflectionImplementation();
+                            break;
+                        case 12:
+                            AnnotationPrograms annotationPrograms = new AnnotationPrograms();
+                            annotationPrograms.ValidationOfAnnotation();
                             break;
                     }
 

@@ -116,6 +116,7 @@ namespace DesignPatterns
         /// </summary>
         private IChatMediator chatMediator;
 
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicUser"/> class.
         /// </summary>
