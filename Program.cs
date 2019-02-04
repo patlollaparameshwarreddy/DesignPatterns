@@ -99,7 +99,7 @@ namespace DesignPatterns
                             break;
                     }
 
-                    Console.WriteLine("enter y to go to main method");
+                    Console.WriteLine("enter y to go to main method or enter any key to stop execution");
                     doCondition = Console.ReadLine();
                 }
                 while (doCondition.Equals("y"));

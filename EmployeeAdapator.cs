@@ -31,6 +31,7 @@ namespace DesignPatterns
                 ////this loop is used for adding employees in to the list
                 foreach (string[] employee in employees)
                 {
+                    ////adding employees to list
                     employeeList.Add(employee[0]);
                     employeeList.Add(",");
                     employeeList.Add(employee[1]);

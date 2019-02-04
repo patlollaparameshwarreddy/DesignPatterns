@@ -163,6 +163,7 @@ namespace DesignPatterns
     }
 
     /// <summary>
+    /// 
     /// Concrete Colleague 2
     /// </summary>
     /// <seealso cref="DesignPatterns.IUser" />
